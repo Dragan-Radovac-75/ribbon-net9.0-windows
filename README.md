@@ -8,5 +8,8 @@ As of .NET Core, the RibbonWindow is no longer supported making the QuickAccessT
 
 All parts of the Ribbon are implemented using Framework only with no other dependencies ensuring seamless intergration into your project. 
 
-![image](https://github.com/user-attachments/assets/c4ad4423-6a02-4157-91b6-fb7adbd98148)
+![image](https://github.com/user-attachments/assets/64b0966b-f4ae-4404-a4a2-c200aaf2db4d)
+
+
+
 
