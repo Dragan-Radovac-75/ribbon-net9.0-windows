@@ -1,4 +1,4 @@
-The Microsoft Ribbon Control .NET 9.0 styled for Windows 10. 
+The Microsoft Ribbon Control .NET 9.0 for Windows. 
 
 All components are contained in individual resource dictionaries (ribbon.xaml, ribbonbutton.xaml, ...). 
 
