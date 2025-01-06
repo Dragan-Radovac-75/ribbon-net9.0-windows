@@ -1,0 +1,95 @@
+﻿<Window x:Class="Application.View.Window" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    Height="677" Width="995" mc:Ignorable="d" 
+    WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen"     
+    Icon="/application.png" Title="Microsoft Ribbon Control .NET 9.0 "
+    Style="{StaticResource WindowFont}">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="imagedictionary.xaml"  />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+    <Grid>
+        <Ribbon x:Name="ribbon" VerticalAlignment="Top" Background="White" BorderThickness="0"  FontSize="11">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu>
+                    <RibbonApplicationMenuItem Header="Exit Application"/>
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="Home" Name="ribbontabHome" IsSelected="True">
+                <RibbonGroup Header="Action" Name="ribbonGroupAction">
+                    <RibbonButton Label="New" LargeImageSource="{StaticResource ImageNew}" SmallImageSource="{StaticResource ImageNew}"/>
+                    <RibbonButton Label="Open" LargeImageSource="{StaticResource ImageOpen}" SmallImageSource="{StaticResource ImageOpen}"/>
+                    <RibbonButton Label="Save" SmallImageSource="{StaticResource ImageSave}"/>
+                    <RibbonButton Label="Refresh" SmallImageSource="{StaticResource ImageRefresh}" />
+                    <RibbonButton Label="Delete" SmallImageSource="{StaticResource ImageDelete}"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Clipboard" Name="ribbonGroupClipboard">
+                    <RibbonButton Label="Copy" LargeImageSource="{StaticResource ImageCopy}" SmallImageSource="{StaticResource ImageCopy}" />
+                    <RibbonButton Label="Paste" LargeImageSource="{StaticResource ImagePaste}" SmallImageSource="{StaticResource ImagePaste}" />
+                    <RibbonButton Label="Cut" SmallImageSource="{StaticResource ImageCut}" />
+                    <RibbonButton Label="Undo" SmallImageSource="{StaticResource ImageUndo}" />
+                </RibbonGroup>
+                <RibbonGroup Header="Items" Name="ribbonGroupItems">
+                    <RibbonButton Label="Expand" LargeImageSource="{StaticResource ImageExpand}" SmallImageSource="{StaticResource ImageExpand}" />
+                    <RibbonButton Label="Collapse" LargeImageSource="{StaticResource ImageCollapse}" />
+                    <RibbonButton Label="Lock" SmallImageSource="{StaticResource ImageLock}" />
+                    <RibbonButton Label="Unlock" SmallImageSource="{StaticResource ImageUnlock}" />
+                    <RibbonButton Label="Find" LargeImageSource="{StaticResource ImageFind}" SmallImageSource="{StaticResource ImageFind}" />
+                    <RibbonContentPresenter>
+                        <RibbonContentPresenter.Content>
+                            <Grid Margin="5,2,0,0"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="131" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="22" />
+                                    <RowDefinition Height="22" />
+                                    <RowDefinition Height="22" />
+                                </Grid.RowDefinitions>
+                                <TextBlock Margin="0,2,0,0" Text="Status" Grid.Column="0" Grid.Row="0" />
+                                <ComboBox IsEditable="True" Width="130" Height="19" Grid.Column="1" Grid.Row="0">
+                                    <ComboBox.Items>
+                                        <ComboBoxItem Content="Complete"></ComboBoxItem>
+                                        <ComboBoxItem Content="In Progress"></ComboBoxItem>
+                                    </ComboBox.Items>
+                                </ComboBox>
+                                <TextBlock Margin="0,2,0,0" Text="Branch" Grid.Column="0" Grid.Row="1" />
+                                <ComboBox IsEditable="True" Width="130" Height="19" Grid.Column="1" Grid.Row="1">
+                                    <ComboBox.Items>
+                                        <ComboBoxItem Content="Adelaide"></ComboBoxItem>
+                                        <ComboBoxItem Content="Brisbane"></ComboBoxItem>
+                                        <ComboBoxItem Content="Hobart"></ComboBoxItem>
+                                        <ComboBoxItem Content="Melbourne"></ComboBoxItem>
+                                        <ComboBoxItem Content="Sydney"></ComboBoxItem>
+                                    </ComboBox.Items>
+                                </ComboBox>
+                                <TextBlock Margin="0,2,0,0" Text="Text" Grid.Column="0" Grid.Row="2" />
+                                <TextBox  Width="130" Height="19" Grid.Column="1" Grid.Row="2" />
+                            </Grid>
+                        </RibbonContentPresenter.Content>
+                    </RibbonContentPresenter>
+                </RibbonGroup>
+                <RibbonGroup Header="Select" Name="ribbonGroupSelect">
+                    <RibbonButton Label="Select all" SmallImageSource="/selectall.png" SnapsToDevicePixels="True"/>
+                    <RibbonButton Label="Select none" SmallImageSource="/selectnone.png" SnapsToDevicePixels="True"/>
+                    <RibbonButton Label="Invert selection" SmallImageSource="/selectinvert.png" SnapsToDevicePixels="True"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Authentication" Name="ribbontabAdministration">
+                <RibbonGroup Header="Connection" Name="ribbonConnection">
+                    <RibbonButton Label="Database" LargeImageSource="{StaticResource Connection}" SmallImageSource="{StaticResource Connection}" />
+                    <RibbonButton Label="Internet" LargeImageSource="{StaticResource InternetConnect}" SmallImageSource="{StaticResource InternetConnect}" />
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</Window>

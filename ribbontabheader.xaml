@@ -1,0 +1,43 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Primitives="clr-namespace:System.Windows.Controls.Ribbon.Primitives;assembly=System.Windows.Controls.Ribbon"
+    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <Style TargetType="RibbonTabHeader">
+        <Setter Property="Padding" Value="7,0,7,0"/>
+        <Setter Property="Margin" Value="0,0,0.4,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RibbonTabHeader">
+                    <Grid x:Name="MainGrid" Margin="0,0,0,0">
+                        <Border x:Name="InnerBorder" BorderThickness="1,1,1,0" BorderBrush="LightBlue" Margin="0,0,0,0">
+                            <ContentPresenter>
+                                <ContentPresenter.Content>
+                                    <TextBlock x:Name="ribbonTabHeaderText" Text="{TemplateBinding Content}" Height="22" Margin="0,0,0,0" Background="#FFF5F6F7" 
+                                                               Foreground="Black" TextAlignment="Center" FontSize="11"
+                                                               HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="13,4,13,0"/>
+
+                                </ContentPresenter.Content>
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="RibbonTabHeader.IsRibbonTabSelected" Value="False">
+                            <Setter TargetName="ribbonTabHeaderText" Property="Background" Value="Transparent"/>
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="Transparent"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RibbonTabHeader.IsMouseOver" Value="True"/>
+                                <Condition Property="RibbonTabHeader.IsRibbonTabSelected" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="LightBlue"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
