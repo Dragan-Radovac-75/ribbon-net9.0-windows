@@ -5,7 +5,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-	  <StartupObject>Application.App</StartupObject>	  
+	  <StartupObject>App.Application</StartupObject>	  
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="properties\**" />

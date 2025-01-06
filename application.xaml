@@ -1,24 +1,22 @@
-﻿<Window x:Class="Application.View.Window" 
+﻿<Window x:Class="App.View.Application" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="677" Width="995"
     WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen"     
-    Icon="/application.png" Title="Microsoft Ribbon Control .NET 9.0">
+    Icon="application.png" Title="Microsoft Ribbon Control .NET 9.0">
 
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="windowfont.xaml" />
-                <ResourceDictionary Source="imagedictionary.xaml" />
-                <ResourceDictionary Source="ribbonbuttonlargestyle.xaml"/>
+                <ResourceDictionary Source="image.xaml"/>
                 <ResourceDictionary Source="ribbon.xaml"/>
                 <ResourceDictionary Source="ribbonapplicationmenu.xaml"/>
-                <ResourceDictionary Source="ribbontabheader.xaml"/>
-                <ResourceDictionary Source="ribbontab.xaml"/>
-                <ResourceDictionary Source="ribbonbutton.xaml"/>
                 <ResourceDictionary Source="ribbonapplicationmenuitem.xaml"/>
+                <ResourceDictionary Source="ribbontab.xaml"/>
+                <ResourceDictionary Source="ribbontabheader.xaml"/>
                 <ResourceDictionary Source="ribbongroup.xaml"/>
-                <!--<ResourceDictionary Source="windowfont.xaml"/>-->
+                <ResourceDictionary Source="ribbonbutton.xaml"/>
+                <ResourceDictionary Source="ribbonbuttonlarge.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
