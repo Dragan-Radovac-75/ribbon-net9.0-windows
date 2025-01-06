@@ -6,6 +6,7 @@ A sample of the ribboncontentpresenter is also included. Back stage can be modif
 
 As of .NET Core, the RibbonWindow is no longer supported making the QuickAccessToolbar obselete.
 
+All parts of the Ribbon are implemented using Framework only with no other dependencies ensuring seamless intergration into your project. 
+
 ![image](https://github.com/user-attachments/assets/c4ad4423-6a02-4157-91b6-fb7adbd98148)
 
-All parts of the Ribbon shown in the image above are Framework only with no other dependencies ensuring seamless intergration into your project. 
