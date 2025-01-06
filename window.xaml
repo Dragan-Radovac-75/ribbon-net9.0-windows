@@ -1,23 +1,30 @@
 ﻿<Window x:Class="Application.View.Window" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
-    Height="677" Width="995" mc:Ignorable="d" 
+    Height="677" Width="995"
     WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen"     
-    Icon="/application.png" Title="Microsoft Ribbon Control .NET 9.0 "
-    Style="{StaticResource WindowFont}">
-    
+    Icon="/application.png" Title="Microsoft Ribbon Control .NET 9.0">
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="imagedictionary.xaml"  />
+                <ResourceDictionary Source="windowfont.xaml" />
+                <ResourceDictionary Source="imagedictionary.xaml" />
+                <ResourceDictionary Source="ribbonbuttonlargestyle.xaml"/>
+                <ResourceDictionary Source="ribbon.xaml"/>
+                <ResourceDictionary Source="ribbonapplicationmenu.xaml"/>
+                <ResourceDictionary Source="ribbontabheader.xaml"/>
+                <ResourceDictionary Source="ribbontab.xaml"/>
+                <ResourceDictionary Source="ribbonbutton.xaml"/>
+                <ResourceDictionary Source="ribbonapplicationmenuitem.xaml"/>
+                <ResourceDictionary Source="ribbongroup.xaml"/>
+                <!--<ResourceDictionary Source="windowfont.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
     </Window.Resources>
+    
     <Grid>
-        <Ribbon x:Name="ribbon" VerticalAlignment="Top" Background="White" BorderThickness="0"  FontSize="11">
+        <Ribbon x:Name="ribbon" VerticalAlignment="Top" Background="White" BorderThickness="0" FontSize="11">
             <Ribbon.ApplicationMenu>
                 <RibbonApplicationMenu>
                     <RibbonApplicationMenuItem Header="Exit Application"/>

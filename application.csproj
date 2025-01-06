@@ -5,8 +5,17 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <AppDesignerFolder>properties</AppDesignerFolder>
+	  <StartupObject>Application.App</StartupObject>	  
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="properties\**" />
+    <EmbeddedResource Remove="properties\**" />
+    <None Remove="properties\**" />
+    <Page Remove="properties\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="app.xaml.cs" />
+  </ItemGroup>
   <ItemGroup>
     <None Remove="application.png" />
     <AppDesigner Include="Properties\" />
@@ -20,10 +29,5 @@
     <Resource Include="selectnone.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="properties\" />
   </ItemGroup>
 </Project>
