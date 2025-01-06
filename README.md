@@ -8,6 +8,8 @@ As of .NET Core, the RibbonWindow is no longer supported making the QuickAccessT
 
 All parts of the Ribbon are implemented using Framework only with no other dependencies ensuring seamless intergration into your project. 
 
+System.Windows.Controls.Ribbon is part of the Microsoft.WindowsDesktop.App.WPF Framework. This Framework is injected into your dependencies when 'Enable WPF for this project' is selected in Properties=>Application->General
+
 ![image](https://github.com/user-attachments/assets/64b0966b-f4ae-4404-a4a2-c200aaf2db4d)
 
 
