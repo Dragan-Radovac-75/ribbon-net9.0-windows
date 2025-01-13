@@ -10,7 +10,8 @@ All parts of the Ribbon are implemented using Framework only with no other depen
 
 System.Windows.Controls.Ribbon is part of the Microsoft.WindowsDesktop.App.WPF Framework. This Framework is injected into your dependencies when 'Enable WPF for this project' is selected in Properties->Application->General
 
-![image](https://github.com/user-attachments/assets/64b0966b-f4ae-4404-a4a2-c200aaf2db4d)
+![image](https://github.com/user-attachments/assets/f0524bb3-ff0a-4f31-b8b3-9e3d1ad94800)
+
 
 
 
